@@ -12,6 +12,7 @@ router.get('/', function(req, res, next) {
     title: 'Programación 2, 2024-1',
     name: 'Kilber Hernández',
     dni: '27867062',
+    section: '4',
   });
 });
 
