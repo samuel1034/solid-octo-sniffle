@@ -8,12 +8,7 @@ var router = express.Router();
 // next
 
 router.get('/', function(req, res, next) {
-  res.render('index', {
-    title: 'Programación 2, 2024-1',
-    name: 'Kilber Hernández',
-    dni: '27867062',
-    section: '4',
-  });
+  res.render('index'  );
 });
 
 module.exports = router;
