@@ -282,67 +282,50 @@
 </div>
 </div></div>
 </div>
-</head>
-<body>
-  <div class="section" id="contact">
-    <div class="cc-contact-information" style="background-image: url('images/staticmap.png')">
-      <div class="container">
-        <div class="cc-contact">
+ <!-- ======= Formulario Section ======= -->
+ <section id="formulario" class="contact">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Formulario</h2>
+      <p><!-- Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas -->.</p>
+    </div>
+
+    <div class="row justify-content-center">
+      
+      <div class="col-md-8">
+        <form action="/form-contact" method="post" id="form">
           <div class="row">
-            <div class="col-md-9">
-              <div class="card mb-0" data-aos="zoom-in">
-                <div class="h4 text-center title">Contactame</div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="card-body">
-                      <form action='/' method="post">
-                        <div class="p pb-3"><strong>Contactame con el siguiente formulario:</strong></div>
-                        <div class="row mb-3">
-                          <div class="col">
-                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
-                              <input class="form-control" type="text" name="name" placeholder="Nombre" required="required"/>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row mb-3">
-                          <div class="col">
-                            <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                              <input class="form-control" type="email" name="_replyto" placeholder="E-mail" required="required"/>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row mb-3">
-                          <div class="col">
-                            <div class="form-group">
-                              <textarea class="form-control" name="comment" placeholder="Tu Mensaje" required="required"></textarea>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col">
-                            <button class="btn btn-primary" type="submit">Enviar</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div> 
-                   <div class="col-md-6">
-                    <div class="card-body">
-                      <p class="mb-0"><strong>Direccion</strong></p>
-                      <p class="pb-2">Villa De Cura, Aragua, Venezuela</p>
-                      <p class="mb-0"><strong>Telefono</strong></p>
-                      <p class="pb-2">04243145933</p>
-                      <p class="mb-0"><strong>Email</strong></p>
-                      <p>kilberkamui@gmail.com</p> 
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
             </div>
           </div>
-        </div>
+        
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="comment" id="comment" placeholder="Comentario" required>
+          </div>
+          <!-- <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div> -->
+          <div class="text-center m-3">
+            <button type="submit" id="form-submit" class="btn btn-primary">Enviar Comentario</button>
+          </div>
+        </form>
+
       </div>
+
     </div>
+        
+  </div>
+        
+</div>
+      
+</section>
   </div></div>
       </div>
     <footer class="footer">

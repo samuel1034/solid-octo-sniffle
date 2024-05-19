@@ -1,8 +1,7 @@
 const toIndex = (req, res, next)=> {
-    res.render('index', { 
-      title: 'Express Formulario',
-      title2: "Pagina de confirmacion"
-    });
-  };
+  res.render('index', { 
+    name: 'Kilber Hernández'
+  });
+};
 
-  module.exports = toIndex;
+module.exports = toIndex;
