@@ -296,26 +296,25 @@
       <div class="col-md-8">
         <form action="/form-contact" method="post" id="form">
           <div class="row">
-            <div class="col-md-6 form-group">
-              <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required>
-            </div>
-            <div class="col-md-6 form-group mt-3 mt-md-0">
-              <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
-            </div>
+              <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+              </div>
           </div>
-        
           <div class="form-group mt-3">
-            <input type="text" class="form-control" name="comment" id="comment" placeholder="Comentario" required>
+              <input type="text" class="form-control" name="comment" id="comment" placeholder="Comentario" required>
           </div>
-          <!-- <div class="my-3">
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
-          </div> -->
+          <div class="form-group">
+              <input type="hidden" name="pais" id="pais">
+              <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+          </div>
           <div class="text-center m-3">
-            <button type="submit" id="form-submit" class="btn btn-primary">Enviar Comentario</button>
+              <button type="submit" id="form-submit" class="btn btn-primary">Enviar Comentario</button>
           </div>
-        </form>
+          
+      </form>
 
       </div>
 
@@ -341,5 +340,17 @@
     <script src="/javascripts/js/now-ui-kit.js?ver=1.1.0"></script>
     <script src="/javascripts/js/aos.js?ver=1.1.0"></script>
     <script src="/javascripts/main.js?ver=1.1.0"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- Google Analytics Demo -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-XXXXXXX');
+    </script>
+    <!-- End Google Analytics Demo -->
+
   </body>
 </html>

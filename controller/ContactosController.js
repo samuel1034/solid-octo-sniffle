@@ -1,4 +1,6 @@
+const axios = require('axios');
 const ContactosModel = require("../models/ContactosModel");
+const sendNotificationEmail = require('../utils/email');
 
 class ContactosController {
     constructor(){
@@ -8,13 +10,12 @@ class ContactosController {
 
     async add(req, res){
         // Validar los datos del formulario
-        const { name, email, comment } = req.body;
+        const { name, email, comment, pais } = req.body;
 
-    if (!name || !email || !comment) {
-      res.status(400).send("Faltan campos requeridos");
-      return;
-    }
-
+        if (!name || !email || !comment) {
+            res.status(400).send("Faltan campos requeridos");
+            return;
+        }
 
         //Guardar los datos del formulario
         const ip = req.ip;
@@ -22,12 +23,12 @@ class ContactosController {
 
         await this.contactosModel.crearContacto(name, email, comment, ip, fecha);
 
-        const contactos = await this.contactosModel.obtenerAllContactos();
-    
-        console.log(contactos);
+        // Enviar correo electrónico de notificación
+        sendNotificationEmail(name, email, pais);
 
-        res.send("Formulario enviado con exito");
+        res.send("Formulario enviado con éxito");
     }
 }
+
 
 module.exports = ContactosController;
