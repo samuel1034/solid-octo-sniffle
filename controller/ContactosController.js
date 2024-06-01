@@ -8,26 +8,28 @@ class ContactosController {
         this.add = this.add.bind(this);
     }
 
-    async add(req, res){
+    async add(req, res) {
         // Validar los datos del formulario
         const { name, email, comment, pais } = req.body;
-
-        if (!name || !email || !comment) {
-            res.status(400).send("Faltan campos requeridos");
-            return;
+      
+        if (!name ||!email ||!comment) {
+          res.status(400).send("Faltan campos requeridos");
+          return;
         }
-
-        //Guardar los datos del formulario
+      
+        // Get the user's IP address from the request object
         const ip = req.ip;
+      
+        //Guardar los datos del formulario
         const fecha = new Date().toISOString();
-
+      
         await this.contactosModel.crearContacto(name, email, comment, ip, fecha);
-
+      
         // Enviar correo electrónico de notificación
-        sendNotificationEmail(name, email, pais);
-
+        sendNotificationEmail(name, email, pais, ip);
+      
         res.send("Formulario enviado con éxito");
-    }
+      }
 }
 
 

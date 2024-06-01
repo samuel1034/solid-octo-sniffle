@@ -4,15 +4,15 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: 'tucorreo@gmail.com',
-        pass: 'tucontraseña'
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
     }
 });
 
 // Función para enviar correo electrónico de notificación
-function sendNotificationEmail(name, email, country) {
+function sendNotificationEmail(name, email, country, ip) {
     const mailOptions = {
-        from: 'tucorreo@gmail.com',
+        from: process.env.EMAIL_USER,
         to: email, // Use the email provided in the form as the recipient's email
         subject: 'Nuevo usuario registrado',
         html: `
@@ -20,6 +20,7 @@ function sendNotificationEmail(name, email, country) {
             <p><strong>Nombre:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>
             <p><strong>País:</strong> ${country}</p>
+            <p><strong>Ip:</strong> ${ip}</p>
         `
     };
 
