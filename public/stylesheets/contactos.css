@@ -1,0 +1,61 @@
+body {
+    background-color: #edf0f0;
+    margin-top: 20px;
+}
+.container {
+    margin-top: 20px;
+}
+.panel {
+    margin-bottom: 20px;
+}
+.panel-body {
+    padding: 20px;
+}
+.media-main .info {
+    overflow: hidden;
+    color: #000;
+}
+.media-main .info h4 {
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+.social-links li a {
+    background: #EFF0F4;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    color: #7A7676;
+}
+.thumb-lg {
+    height: 84px;
+    width: 84px;
+}
+.p-t-10 {
+    padding-top: 10px !important;
+}
+.btn-primary, 
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.btn-primary.focus, 
+.btn-primary:active, 
+.btn-primary:focus, 
+.btn-primary:hover, 
+.open>.dropdown-toggle.btn-primary {
+    background-color: #3bc0c3;
+    border: 1px solid #3bc0c3;
+}
+.contactos-title {
+    font-size: 3em;
+    color: #337ab7;
+    font-weight: bold;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-shadow: 2px 2px #ddd;
+    margin-bottom: 30px;
+}

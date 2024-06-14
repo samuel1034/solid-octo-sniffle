@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Registrarse</title>
+	<link rel="stylesheet" href="/stylesheets/signup.css">
+    <link rel="shortcut icon" href="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/external-user-medical-kiranshastry-gradient-kiranshastry.png" type="image/png">
+</head>
+<body>
+	<div class="container">
+		<h1 class="label">Registrarse</h1>
+		<form class="login_form" action="/signup" method="post" name="form" onsubmit="return validated()">
+            <div class="font">Username</div>
+            <input autocomplete="off" type="text" name="username">
+            <div class="font">Email o Teléfono</div>
+			<input autocomplete="off" type="text" name="email">
+			<div id="email_error">Please fill up your Email or Phone</div>
+			<div class="font font2">Contraseña</div>
+			<input type="password" name="password">
+			<div id="pass_error">Please fill up your Password</div>
+			<button type="submit">Registrarse</button>
+		</form>
+	</div>	
+	<script src="valid.js"></script>
+</body>
+</html>
